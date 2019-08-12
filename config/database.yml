@@ -23,7 +23,10 @@ default: &default
 
 development:
   <<: *default
-  database: time_logger_development
+  database: time_logger
+  username: stavri
+  password: 1234
+
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -80,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: time_logger_production
-  username: time_logger
-  password: <%= ENV['TIME_LOGGER_DATABASE_PASSWORD'] %>
+  database: time_logger
+  username: deploy
+  password: 1234
